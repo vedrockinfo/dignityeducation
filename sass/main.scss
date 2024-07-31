@@ -1,0 +1,19 @@
+@import "./abstract/function";
+@import "./abstract/mixins";
+@import "./abstract/responsive";
+@import "./abstract/varaiables";
+
+@import "./base/animation";
+@import "./base/base";
+@import "./base/typography";
+@import "./base/utilities";
+
+@import "./components/button";
+@import "./components/our-story";
+@import "./components/our-team";
+
+@import "./layout/footer";
+@import "./layout/header";
+
+@import "./pages/home";
+

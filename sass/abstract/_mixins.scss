@@ -1,0 +1,72 @@
+@mixin tabsarea {
+    .nav-area{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        .nav-item{
+            width: calc(100% / 5);
+            height: 15rem;
+            .tab-link{
+                display: block;
+                height: 100%;
+                background: $colorWhite;
+            }
+            &:not(:last-child){
+            .tab-link{
+                border-right: 1px solid #000;
+                }
+            }
+            .global-tabs{
+                text-align: center;
+                padding: 2rem 3rem;
+                height: 100%;
+                display: grid;
+                place-content: center;
+                img{
+                    height:5rem;
+                    margin: 0 auto;
+                }
+                h6{
+                    color: $colorPrimary;
+                    font-size: 1.6rem;
+                    text-align: center;
+                    text-transform: uppercase;
+                }
+            }
+            .active {
+                font-weight: bold;  
+                .global-tabs{
+                    background: $colorPrimary;
+                    transform: scale(1.2);
+                    border: 1px solid $colorWhite;
+                    position: relative;
+                    // &::before{
+                    //     content: "";
+                    //     background: $colorGrey;
+                    //     position: absolute;
+                    //     width: 100%;
+                    //     height: 100%;
+                    //     bottom: -4rem;
+                    //     left: 0;
+                    // }
+                    img{
+                        filter: invert(1) brightness(2);
+                    }
+                    h6{
+                        color: $colorWhite;
+                    }
+                }
+            }
+        }
+    }
+}
+.tab-content-wrapper {
+    display: none;
+    margin-top: 4rem;
+    &.active {
+        display: block;
+    }
+}

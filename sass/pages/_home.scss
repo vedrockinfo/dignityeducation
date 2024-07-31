@@ -1,0 +1,28 @@
+.hero-section{
+    height: calc(100vh - 4rem);
+    overflow: hidden;
+    .bg-video {
+        height: 100%;
+        width: 100%;
+        &__content{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
+.inner-tabs-area{
+    @include respond (minWidth992){
+        margin-top: -8rem;
+    }
+    @include tabsarea;
+    .tab-content{
+        padding-top: 4rem;
+    }
+}
+.custom-dot {
+    background: #ccc;
+    border-radius: 50%;
+    padding: 5px;
+    display: inline-block;
+  }

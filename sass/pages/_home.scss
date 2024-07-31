@@ -2,14 +2,29 @@
     height: calc(100vh - 4rem);
     overflow: hidden;
     .bg-video {
-        height: 100%;
+        position: relative;
         width: 100%;
+        max-width: 100%;
+        height: 100%;
+        z-index: -1;
+        margin: auto;
         &__content{
             height: 100%;
             width: 100%;
             object-fit: cover;
         }
-    }
+      }
+      .volume-button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        border-radius: 50%;
+        padding: 10px;
+        cursor: pointer;
+      }
 }
 .inner-tabs-area{
     @include respond (minWidth992){
@@ -20,9 +35,30 @@
         padding-top: 4rem;
     }
 }
-.custom-dot {
-    background: #ccc;
-    border-radius: 50%;
-    padding: 5px;
-    display: inline-block;
-  }
+.chronical-area{
+    #growth, 
+    #crisis, 
+    #expansion, 
+    #poineering{
+        cursor: pointer;
+    }
+    .vector-content{
+        &__box{
+            background: var(--graph-clr);
+            padding: 1rem;
+            .content-wrapper{
+                background: $colorWhite;
+                ul{
+                    margin-bottom: 0;
+                    padding: 1rem 2rem;
+                    list-style: disc;
+                    li{
+                        &:not(:last-child){
+                            padding-bottom: 1.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

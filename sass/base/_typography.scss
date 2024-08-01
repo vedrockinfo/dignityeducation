@@ -108,11 +108,10 @@ h6 {
 }
 
 .heading-tertiary{
-  line-height: 1.25em;
+  line-height: 1;
   text-align: center;
-  margin-bottom: 20px;
   text-transform: capitalize;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
   color: $colorPrimary;
   @include respond(maxWidth992) {

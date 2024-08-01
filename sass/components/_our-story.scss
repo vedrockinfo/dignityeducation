@@ -1,7 +1,13 @@
 .our-story{
+    @include respond (maxWidth768){
+        svg{
+            width: 100%;
+            height: auto;
+        }
+    }
     .content-wrapper{
         background: $colorGrey;
-        padding: 1rem;
+        padding: 2.5rem 4rem;
         .mission-wrapper{
             @include respond (minWidth992){
                 display: flex;

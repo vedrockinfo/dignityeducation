@@ -114,3 +114,47 @@ const video = document.getElementById('myVideo');
         volumeButton.textContent = '🔊';
       }
     });
+
+    // $(document).ready(function () {
+    //   var path = window.location.pathname.split("/").pop();
+    //   if (path == '') {
+    //     path = 'index.html';
+    //   }
+    //   $('.navbar-nav a[href="' + path + '"]').addClass('active');
+    // });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    // Function to update active class
+    function updateActiveClass() {
+      var path = window.location.pathname.split("/").pop();
+      
+      // If path is empty, set it to 'index.html'
+      if (path == '') {
+        path = 'index.html';
+      }
+
+      // Remove active class from all nav links
+      document.querySelectorAll('.navbar-nav .nav-link').forEach(function (link) {
+        link.classList.remove('active');
+      });
+
+      // Add active class to the current nav link
+      var activeLink = document.querySelector('.navbar-nav .nav-link[href="' + path + '"]');
+      if (activeLink) {
+        activeLink.classList.add('active');
+      }
+    }
+
+    // Initial update on page load
+    updateActiveClass();
+
+    // Update active class on link click
+    document.querySelectorAll('.navbar-nav .nav-link').forEach(function (link) {
+      link.addEventListener('click', function () {
+        document.querySelectorAll('.navbar-nav .nav-link').forEach(function (link) {
+          link.classList.remove('active');
+        });
+        this.classList.add('active');
+      });
+    });
+  });

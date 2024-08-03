@@ -70,6 +70,18 @@
   }
 }
 
+.space-three {
+  height: 2.5rem;
+
+  @include respond(maxWidth992) {
+    height: 2rem;
+  }
+
+  @include respond(maxWidth768) {
+    height: 1.5rem;
+  }
+}
+
 .primary-list {
     li {
     position: relative;
@@ -119,3 +131,6 @@
       }
     }
   } 
+  .row{
+    row-gap: 3rem;
+  }

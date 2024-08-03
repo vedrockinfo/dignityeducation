@@ -1,10 +1,10 @@
-.global-btn-one{
-    background-image: linear-gradient(40deg, $colorPrimary, $colorSecondary);
+.global-btn-dark{
+    background: $colorPrimary;
     color: $colorWhite;
     border: 1px solid $colorPrimary;
-    border-radius: 30px;
+    border-radius: 3px;
     transition: all 0.4s;
-    max-width: 250px;
+    max-width: 15rem;
     text-transform: uppercase;
     height: 40px;
     display: grid;
@@ -14,5 +14,42 @@
         background: transparent;
     border: 1px solid $colorPrimary;
     color: $colorPrimary;
+    }
+}
+.global-btn-light{
+    background: $colorWhite;
+    color: $colorPrimary;
+    border: 1px solid $colorWhite;
+    border-radius: 3px;
+    transition: all 0.4s;
+    max-width: 15rem;
+    text-transform: uppercase;
+    height: 40px;
+    display: grid;
+    place-content: center;
+    font-weight: 600;
+    box-shadow: 3px 3px 0 #696969;
+    &:hover{
+        background: transparent;
+    border: 1px solid $colorWhite;
+    color: $colorWhite;
+    box-shadow: none;
+    }
+}
+.global-btn-light-two{
+    background: #ccc;
+    color: $colorBlack;
+    border: 1px solid $colorWhite;
+    border-radius: 3px;
+    transition: all 0.4s;
+    max-width: 15rem;
+    text-transform: uppercase;
+    height: 40px;
+    display: grid;
+    place-content: center;
+    font-weight: 600;
+    box-shadow: 3px 3px 0 #696969;
+    &:hover{
+    box-shadow: none;
     }
 }

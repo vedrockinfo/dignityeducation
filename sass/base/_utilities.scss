@@ -177,3 +177,74 @@
   .row{
     row-gap: 3rem;
   }
+  .map-grid {
+    display: grid;
+    @include respond (minWidth768){
+        grid-template-columns: 55% 45%;
+    }
+    align-items: flex-end;
+
+    .indiamapgrid {
+        column-count: 2;
+
+        .indiagriditems {
+            padding-bottom: 7px;
+        }
+
+        p {
+            display: flex;
+            gap: 10px;
+            line-height: 18px;
+            align-items: baseline;
+            font-size: 14px;
+
+            span {
+                display: block;
+                aspect-ratio: 1;
+                height: 14px;
+                width: 14px;
+                border-radius: 2px;
+            }
+        }
+    }
+}
+
+.alfagrid {
+    .alfagriditems {
+        padding-bottom: 7px;
+    }
+
+    @media screen and (min-width:1400px) {
+        column-count: 5;
+    }
+
+    @media screen and (min-width:992px) and (max-width:1399.9px) {
+        column-count: 3;
+    }
+
+    @media screen and (min-width:575.9px) and (max-width:991.9px) {
+        column-count: 3;
+    }
+
+    @media screen and (max-width:575.8px) {
+        column-count: 2;
+    }
+
+    margin-top: 30px;
+
+    p {
+        display: flex;
+        gap: 10px;
+        line-height: 18px;
+        align-items: baseline;
+        font-size: 14px;
+
+        span {
+            display: block;
+            aspect-ratio: 1;
+            height: 14px;
+            width: 14px;
+            border-radius: 2px;
+        }
+    }
+}

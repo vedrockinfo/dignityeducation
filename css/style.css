@@ -103,7 +103,8 @@ h6 {
   @media only screen and (max-width: 768px) {
     .heading-primary {
       margin-bottom: 25px;
-      font-size: 30px; } }
+      font-size: 30px;
+      text-align: center; } }
   @media only screen and (max-width: 575px) {
     .heading-primary {
       margin-bottom: 20px;
@@ -157,6 +158,12 @@ h6 {
       margin-bottom: 20px;
       font-size: 16px; } }
 
+.heading-five {
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: #004500;
+  text-align: center; }
+
 .sub-heading {
   line-height: 1.25em;
   text-align: center;
@@ -194,6 +201,36 @@ li {
     li {
       font-size: 14px;
       line-height: 1.7; } }
+
+.toolkit-heads {
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+  position: relative;
+  margin-bottom: 30px;
+  padding: 8px 20px;
+  display: inline-block; }
+  .toolkit-heads::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #004500;
+    z-index: -1;
+    transform: skewX(25deg) rotate(-2deg); }
+  .toolkit-heads::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #ffffff;
+    z-index: -2;
+    transform: skewX(25deg) rotate(5deg); }
 
 .hero-section {
   overflow: hidden; }
@@ -405,6 +442,66 @@ li {
 
 .row {
   row-gap: 3rem; }
+
+.map-grid {
+  display: grid;
+  align-items: flex-end; }
+  @media only screen and (min-width: 768.1px) {
+    .map-grid {
+      grid-template-columns: 55% 45%; } }
+  .map-grid .indiamapgrid {
+    column-count: 2; }
+    .map-grid .indiamapgrid .indiagriditems {
+      padding-bottom: 7px; }
+    .map-grid .indiamapgrid p {
+      display: flex;
+      gap: 10px;
+      line-height: 18px;
+      align-items: baseline;
+      font-size: 14px; }
+      .map-grid .indiamapgrid p span {
+        display: block;
+        aspect-ratio: 1;
+        height: 14px;
+        width: 14px;
+        border-radius: 2px; }
+
+.alfagrid {
+  margin-top: 30px; }
+  .alfagrid .alfagriditems {
+    padding-bottom: 7px; }
+  @media screen and (min-width: 1400px) {
+    .alfagrid {
+      column-count: 5; } }
+  @media screen and (min-width: 992px) and (max-width: 1399.9px) {
+    .alfagrid {
+      column-count: 3; } }
+  @media screen and (min-width: 575.9px) and (max-width: 991.9px) {
+    .alfagrid {
+      column-count: 3; } }
+  @media screen and (max-width: 575.8px) {
+    .alfagrid {
+      column-count: 2; } }
+  .alfagrid p {
+    display: flex;
+    gap: 10px;
+    line-height: 18px;
+    align-items: baseline;
+    font-size: 14px; }
+    .alfagrid p span {
+      display: block;
+      aspect-ratio: 1;
+      height: 14px;
+      width: 14px;
+      border-radius: 2px; }
+
+@media only screen and (min-width: 992.1px) {
+  .alfa-section .sub-heading {
+    text-align: left; } }
+
+@media only screen and (max-width: 768px) {
+  .alfa-section h2 {
+    text-align: center; } }
 
 .global-btn-dark {
   background: #004500;
@@ -731,8 +828,14 @@ li {
     position: relative; }
     .devi-team .nav .nav-link:nth-child(1), .devi-team .nav .nav-link:nth-child(2), .devi-team .nav .nav-link:nth-child(3), .devi-team .nav .nav-link:nth-child(5) {
       width: calc(87% / 4 - 2px); }
+      @media only screen and (max-width: 575px) {
+        .devi-team .nav .nav-link:nth-child(1), .devi-team .nav .nav-link:nth-child(2), .devi-team .nav .nav-link:nth-child(3), .devi-team .nav .nav-link:nth-child(5) {
+          width: calc(87% / 2 - 2px); } }
     .devi-team .nav .nav-link:nth-child(4) {
       width: calc(13% - 2px); }
+      @media only screen and (max-width: 575px) {
+        .devi-team .nav .nav-link:nth-child(4) {
+          width: calc(43.5% - 2px); } }
     .devi-team .nav .nav-link:not(:last-child)::after {
       content: "";
       position: absolute;
@@ -753,6 +856,9 @@ li {
         left: 0;
         width: 100%;
         height: 16px; }
+        @media only screen and (max-width: 575px) {
+          .devi-team .nav .nav-link.active::before {
+            content: none; } }
 
 .devi-team .tab-content .tab-pane .team-grid {
   display: grid;
@@ -760,6 +866,12 @@ li {
   gap: 2rem;
   background-color: rgba(241, 241, 242, 0.5);
   padding: 2rem; }
+  @media only screen and (max-width: 992px) {
+    .devi-team .tab-content .tab-pane .team-grid {
+      grid-template-columns: repeat(2, 1fr); } }
+  @media only screen and (max-width: 575px) {
+    .devi-team .tab-content .tab-pane .team-grid {
+      grid-template-columns: repeat(1, 1fr); } }
   .devi-team .tab-content .tab-pane .team-grid .team-member .card {
     text-align: center;
     padding: 2rem 1rem; }
@@ -852,6 +964,307 @@ li {
           bottom: -2.1rem;
           left: 50%;
           transform: translateX(-50%); } }
+
+.our-partners .partner-grid {
+  display: grid;
+  gap: 1rem; }
+  @media only screen and (min-width: 1200.1px) {
+    .our-partners .partner-grid {
+      grid-template-columns: repeat(9, 1fr); } }
+  @media screen and (min-width: 992px) and (max-width: 1199.9px) {
+    .our-partners .partner-grid {
+      grid-template-columns: repeat(6, 1fr); } }
+  @media screen and (min-width: 768px) and (max-width: 991.9px) {
+    .our-partners .partner-grid {
+      grid-template-columns: repeat(6, 1fr); } }
+  @media screen and (min-width: 575.1px) and (max-width: 767.9px) {
+    .our-partners .partner-grid {
+      grid-template-columns: repeat(5, 1fr); } }
+  @media screen and (max-width: 575px) {
+    .our-partners .partner-grid {
+      grid-template-columns: repeat(3, 1fr); } }
+  .our-partners .partner-grid__item:not(:nth-child(2)) {
+    width: 10rem;
+    height: 10rem; }
+  @media only screen and (min-width: 1200.1px) {
+    .our-partners .partner-grid__item:nth-child(2) {
+      grid-column-start: 2;
+      grid-column-end: 9;
+      grid-row-start: 1;
+      grid-row-end: 5; } }
+  .our-partners .partner-grid__item:nth-child(2) .img-wrapper {
+    border: none;
+    width: inherit;
+    height: auto; }
+  @media screen and (min-width: 992px) and (max-width: 1199.9px) {
+    .our-partners .partner-grid__item:nth-child(2) {
+      grid-column-start: 2;
+      grid-column-end: 6;
+      grid-row-start: 1;
+      grid-row-end: 4; } }
+  @media screen and (min-width: 768px) and (max-width: 991.9px) {
+    .our-partners .partner-grid__item:nth-child(2) {
+      grid-column-start: 2;
+      grid-column-end: 5;
+      grid-row-start: 1;
+      grid-row-end: 3; } }
+  @media screen and (min-width: 575.1px) and (max-width: 767.9px) {
+    .our-partners .partner-grid__item:nth-child(2) {
+      grid-column-start: 1;
+      grid-column-end: 6;
+      grid-row-start: 1;
+      grid-row-end: 3; } }
+  @media screen and (max-width: 575px) {
+    .our-partners .partner-grid__item:nth-child(2) {
+      grid-column-start: 1;
+      grid-column-end: 4;
+      grid-row-start: 1;
+      grid-row-end: 3; } }
+  .our-partners .partner-grid__item .img-wrapper {
+    border: 4px solid #f1f1f2;
+    border-radius: 5px;
+    padding: 1rem;
+    width: 10rem;
+    height: 10rem; }
+    .our-partners .partner-grid__item .img-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center; }
+
+.stories-of-transformation .our-volunteers .item {
+  background: #f1f1f2;
+  padding: 20px;
+  position: relative; }
+  .stories-of-transformation .our-volunteers .item::after, .stories-of-transformation .our-volunteers .item::before {
+    content: "";
+    background: #004500;
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    z-index: 1; }
+  .stories-of-transformation .our-volunteers .item::before {
+    top: 0;
+    left: 0; }
+  .stories-of-transformation .our-volunteers .item::after {
+    bottom: 0;
+    right: 0; }
+  .stories-of-transformation .our-volunteers .item .premium-person-info-container {
+    background: transparent;
+    position: relative;
+    z-index: 2;
+    padding: 30px;
+    border: 4px solid #ffffff; }
+    @media screen and (min-width: 1400px) {
+      .stories-of-transformation .our-volunteers .item .premium-person-info-container {
+        min-height: calc(370px + 7rem); } }
+    @media screen and (min-width: 1200.5px) and (max-width: 1399.9px) {
+      .stories-of-transformation .our-volunteers .item .premium-person-info-container {
+        min-height: calc(400px + 7rem); } }
+    @media screen and (min-width: 991.5px) and (max-width: 1199.9px) {
+      .stories-of-transformation .our-volunteers .item .premium-person-info-container {
+        min-height: calc(450px + 7rem); } }
+    .stories-of-transformation .our-volunteers .item .premium-person-info-container .heading-six {
+      text-align: center; }
+    .stories-of-transformation .our-volunteers .item .premium-person-info-container .heading-five {
+      margin: 1.5rem 0; }
+    .stories-of-transformation .our-volunteers .item .premium-person-info-container .age-of-learners {
+      display: none; }
+
+.our-learners {
+  background: #004500;
+  position: relative; }
+  .our-learners button.owl-prev,
+  .our-learners button.owl-next {
+    background: #ffffff !important; }
+    .our-learners button.owl-prev i,
+    .our-learners button.owl-next i {
+      color: #004500; }
+  @media only screen and (min-width: 992.1px) {
+    .our-learners button.owl-prev {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%); }
+    .our-learners button.owl-next {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%); } }
+  .our-learners::before {
+    background-image: url(../img/curve-02.png);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 1;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 295px;
+    height: 177px;
+    transform: rotate(180deg); }
+  .our-learners::after {
+    background-image: url(../img/curve-02.png);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 1;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 295px;
+    height: 177px; }
+  .our-learners .sp-testimonial-free {
+    background: #ffffff;
+    padding: 5rem;
+    height: 100%;
+    position: relative; }
+    @media only screen and (max-width: 768px) {
+      .our-learners .sp-testimonial-free {
+        padding: 3rem; } }
+    .our-learners .sp-testimonial-free::before {
+      content: "";
+      background: transparent;
+      border: 1px solid #110B11;
+      width: calc(100% - 3rem);
+      height: calc(100% - 3rem);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+      z-index: 0; }
+    .our-learners .sp-testimonial-free .sp-testimonial-client-image {
+      margin: 0 auto 22px;
+      position: relative;
+      max-width: 10rem;
+      max-height: 10rem; }
+      .our-learners .sp-testimonial-free .sp-testimonial-client-image img {
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 1 / 1;
+        border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
+        display: inline-block !important;
+        max-height: inherit;
+        z-index: 3;
+        position: relative;
+        object-position: top;
+        object-fit: cover; }
+      .our-learners .sp-testimonial-free .sp-testimonial-client-image::before {
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 2;
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        background-color: #ff2c9c;
+        width: 100%;
+        height: 100%; }
+      .our-learners .sp-testimonial-free .sp-testimonial-client-image:after {
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 1;
+        content: "";
+        position: absolute;
+        border-radius: 65% 35% 70% 30%/64% 31% 69% 36%;
+        background-color: #ffac00;
+        width: 100%;
+        height: 100%; }
+    .our-learners .sp-testimonial-free .sp-testimonial-content {
+      font-size: 16px;
+      line-height: 26px;
+      text-transform: none;
+      text-align: center;
+      letter-spacing: normal;
+      font-weight: 400;
+      font-style: normal;
+      margin: 0 0 20px 0; }
+    .our-learners .sp-testimonial-free .sp-testimonial-client-name {
+      font-size: 16px;
+      line-height: 24px;
+      text-transform: none;
+      text-align: center;
+      letter-spacing: normal;
+      font-weight: 700;
+      font-style: normal;
+      margin: 0 0 8px 0;
+      padding: 0;
+      color: #004500; }
+    .our-learners .sp-testimonial-free .sp-testimonial-client-rating {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 15px;
+      gap: 3px; }
+      .our-learners .sp-testimonial-free .sp-testimonial-client-rating i {
+        font-size: 19px;
+        color: #ffb900; }
+
+.toolkits__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px; }
+  .toolkits__grid:nth-child(4n) {
+    background: #004500;
+    padding: 4rem; }
+    .toolkits__grid:nth-child(4n) .toolkits__card {
+      outline: 1.6rem solid #ffffff; }
+  .toolkits__grid:not(:last-child) {
+    margin-bottom: 50px; }
+  @media screen and (min-width: 600px) and (max-width: 992px) {
+    .toolkits__grid {
+      grid-template-columns: repeat(2, 1fr); } }
+  @media screen and (max-width: 599.9px) {
+    .toolkits__grid {
+      grid-template-columns: repeat(1, 1fr); } }
+
+.toolkits__card {
+  position: relative;
+  overflow: hidden;
+  transition: 0.4s ease; }
+  @media screen and (max-width: 599.9px) {
+    .toolkits__card {
+      width: calc(80% - 50px);
+      margin: auto; } }
+  .toolkits__card a {
+    display: block; }
+    .toolkits__card a .book-ss {
+      object-fit: cover;
+      object-position: top;
+      transition: 3s ease-in-out; }
+      @media screen and (min-width: 600px) {
+        .toolkits__card a .book-ss {
+          height: 200px;
+          width: 100%; } }
+    .toolkits__card a .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(2, 2, 2, 0.5);
+      transition: 0.4s ease; }
+      .toolkits__card a .overlay .vertical-scroll {
+        filter: invert(1);
+        width: 15px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transition: 0.4s ease;
+        transform: translate(-50%, -50%);
+        animation: slidetop .6s ease-in-out infinite alternate; }
+  .toolkits__card:hover a .book-ss {
+    object-position: bottom; }
+  .toolkits__card:hover .overlay {
+    background: rgba(2, 2, 2, 0.25); }
+    .toolkits__card:hover .overlay .vertical-scroll {
+      opacity: 0;
+      visibility: hidden; }
 
 header {
   width: 100%;

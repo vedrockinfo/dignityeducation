@@ -22,7 +22,7 @@ jQuery(document).ready(function () {
 });
 
 jQuery(document).ready(function () {
-  jQuery('.contact-form .form-control').on('focus', function () {
+  jQuery('.contact .form-control').on('focus', function () {
     jQuery(this).parent().addClass('focused');
   }).on('blur', function () {
     jQuery(this).parent().removeClass('focused');

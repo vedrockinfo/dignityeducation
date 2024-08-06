@@ -125,7 +125,7 @@
   }
 }
 
-.primary-list {
+.primary-listing {
     li {
     position: relative;
     &:not(:last-child){
@@ -133,14 +133,15 @@
     }
     &:before {
       content: "";
-      background-image: url("../images/primary-list-01.png");
-      background-size: cover;
+      background: #ffbf46;
       position: absolute;
-      top: 15px;
-      left: -30px;
-      width: 20px;
-      height: 20px;
-      transform: translateY(-50%);
+      width: 13px;
+      height: 13px;
+      top: 5px;
+      left: -25px;
+      border-radius: 50%;
+      outline: 1px solid #ffbf46;
+      border: 2px solid #ffffff;
     }
   }
 }

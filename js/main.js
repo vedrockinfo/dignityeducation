@@ -181,3 +181,68 @@ const video = document.getElementById('myVideo');
       }
     }
   })
+
+  $('.gcommittee').owlCarousel({
+    loop: true,
+    margin: 20,
+    nav: true,
+    dots: false,
+    navText: ['<i class="fa-solid fa-angle-left"></i>', '<i class="fa-solid fa-angle-right"></i>'],
+    autoplay: false,
+    autoplayTimeout: 7000,
+    smartSpeed: 800,
+    responsive: {
+      0: {
+        items: 1
+      },
+      768: {
+        items: 2
+      },
+      992: {
+        items: 4
+      }
+    }
+  })
+  $('.literacry-ss-grid').owlCarousel({
+    loop: true,
+    margin: 40,
+    nav: true,
+    dots: false,
+    navText: ['<i class="fa-solid fa-angle-left"></i>', '<i class="fa-solid fa-angle-right"></i>'],
+    autoplay: false,
+    autoplayTimeout: 7000,
+    smartSpeed: 800,
+    responsive: {
+      0: {
+        items: 1
+      },
+      768: {
+        items: 2
+      },
+      992: {
+        items: 5
+      }
+    }
+  })
+
+  $('.impact-carousing').owlCarousel({
+    loop: true,
+    margin: 40,
+    nav: true,
+    dots: false,
+    navText: ['<i class="fa-solid fa-angle-left"></i>', '<i class="fa-solid fa-angle-right"></i>'],
+    autoplay: false,
+    autoplayTimeout: 7000,
+    smartSpeed: 800,
+    responsive: {
+      0: {
+        items: 1
+      },
+      768: {
+        items: 1
+      },
+      992: {
+        items: 1
+      }
+    }
+  })

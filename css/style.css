@@ -790,6 +790,154 @@ li {
         background: transparent;
         color: white; }
 
+.d-talks-cta {
+  background: #004500;
+  position: relative; }
+  .d-talks-cta p {
+    color: #ffffff; }
+
+.dtalks-speak ul {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 0 0; }
+  @media only screen and (min-width: 992.1px) {
+    .dtalks-speak ul li:nth-child(1) {
+      height: 112px; }
+    .dtalks-speak ul li:nth-child(2) {
+      height: 84px; }
+    .dtalks-speak ul li:nth-child(3) {
+      height: 84px; } }
+  .dtalks-speak ul li:not(:last-child) {
+    margin-bottom: 2rem; }
+
+.d-talks-cta p {
+  font-size: 2.4rem !important;
+  font-weight: 300;
+  font-style: oblique; }
+  @media only screen and (min-width: 768.1px) {
+    .d-talks-cta p {
+      padding-right: 3rem; } }
+
+.d-talks-cta .btn.btn-four {
+  background: #ffffff;
+  color: #004500;
+  border: 1px solid #ffffff;
+  border-radius: 30px;
+  transition: 0.4s ease;
+  width: 200px;
+  text-transform: uppercase;
+  height: 40px;
+  display: grid;
+  place-content: center;
+  font-weight: 600; }
+  @media only screen and (max-width: 768px) {
+    .d-talks-cta .btn.btn-four {
+      width: 160px;
+      height: 40px;
+      margin: auto; } }
+  .d-talks-cta .btn.btn-four:hover {
+    background: transparent;
+    border: 1px solid #ffffff;
+    color: #ffffff; }
+
+.top-dtalks .link-one {
+  text-align: center; }
+  .top-dtalks .link-one a {
+    width: auto;
+    display: inline-block; }
+
+.top-dtalks .tab-area .list-group .list-group-item {
+  background: #004500;
+  color: #ffffff;
+  text-align: center;
+  padding: 15px 0;
+  font-weight: 700; }
+  .top-dtalks .tab-area .list-group .list-group-item.active {
+    background: #50b753;
+    position: relative; }
+    .top-dtalks .tab-area .list-group .list-group-item.active::before {
+      background: #50b753;
+      position: absolute;
+      content: "";
+      bottom: -7.5px;
+      width: 15px;
+      height: 15px;
+      left: 50%;
+      transform: translateX(-50%) rotate(45deg); }
+
+.top-dtalks .tab-area .tab-content .tab-pane .d-talks-video-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 2rem;
+  column-gap: 1.5rem;
+  padding: 3rem 1.5rem; }
+  @media screen and (min-width: 992px) and (max-width: 1199.9px) {
+    .top-dtalks .tab-area .tab-content .tab-pane .d-talks-video-grid {
+      grid-template-columns: repeat(3, 1fr); } }
+  @media screen and (min-width: 575px) and (max-width: 991.9px) {
+    .top-dtalks .tab-area .tab-content .tab-pane .d-talks-video-grid {
+      grid-template-columns: repeat(2, 1fr); } }
+  @media screen and (max-width: 575.9px) {
+    .top-dtalks .tab-area .tab-content .tab-pane .d-talks-video-grid {
+      grid-template-columns: repeat(1, 1fr); } }
+  .top-dtalks .tab-area .tab-content .tab-pane .d-talks-video-grid__items {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    position: relative;
+    transition: all 0.5s; }
+    .top-dtalks .tab-area .tab-content .tab-pane .d-talks-video-grid__items::before {
+      content: "";
+      background: #004500;
+      height: 3px;
+      width: 0;
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      transition: all 0.5s; }
+    .top-dtalks .tab-area .tab-content .tab-pane .d-talks-video-grid__items:hover {
+      transform: translateY(-3px); }
+      .top-dtalks .tab-area .tab-content .tab-pane .d-talks-video-grid__items:hover::before {
+        width: 100%; }
+  .top-dtalks .tab-area .tab-content .tab-pane .d-talks-video-grid__wrapper {
+    position: relative; }
+    .top-dtalks .tab-area .tab-content .tab-pane .d-talks-video-grid__wrapper .overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      border: none; }
+      .top-dtalks .tab-area .tab-content .tab-pane .d-talks-video-grid__wrapper .overlay img {
+        width: 4.8rem; }
+  .top-dtalks .tab-area .tab-content .tab-pane .d-talks-video-grid__content {
+    padding: 2.5rem 1rem; }
+    .top-dtalks .tab-area .tab-content .tab-pane .d-talks-video-grid__content h4 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #004500;
+      text-align: center; }
+    .top-dtalks .tab-area .tab-content .tab-pane .d-talks-video-grid__content p {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 16px;
+      text-align: center; }
+
+.top-dtalks .tab-area .tab-content .tab-pane .modal-content {
+  position: relative;
+  background: transparent; }
+  .top-dtalks .tab-area .tab-content .tab-pane .modal-content .btn-close {
+    position: absolute;
+    right: -15px;
+    top: -20px;
+    z-index: 1;
+    opacity: 1; }
+    .top-dtalks .tab-area .tab-content .tab-pane .modal-content .btn-close i {
+      color: #ffffff;
+      font-size: 2rem; }
+  .top-dtalks .tab-area .tab-content .tab-pane .modal-content .modal-body {
+    padding: 0; }
+
 .alfa-way-area img {
   display: block;
   margin: auto; }
@@ -977,6 +1125,226 @@ li {
           height: 100%;
           width: 100%;
           padding: 1.5rem; }
+
+.alfa-wordwide .alfa-world-grid {
+  display: grid;
+  align-items: end;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem; }
+  @media only screen and (max-width: 992px) {
+    .alfa-wordwide .alfa-world-grid {
+      grid-template-columns: repeat(2, 1fr); } }
+  @media only screen and (max-width: 575px) {
+    .alfa-wordwide .alfa-world-grid {
+      grid-template-columns: repeat(1, 1fr); } }
+  .alfa-wordwide .alfa-world-grid__item {
+    padding: 1rem 1rem 0;
+    border: 1px solid #110B11;
+    text-align: center; }
+    .alfa-wordwide .alfa-world-grid__item .country-head {
+      background: var(--alfa);
+      color: #ffffff;
+      text-transform: capitalize;
+      margin-bottom: 0;
+      text-align: center;
+      padding: 10px 30px;
+      border-radius: 4px;
+      display: inline-block;
+      font-weight: 700;
+      position: relative;
+      top: -30px;
+      letter-spacing: 0.4px; }
+    .alfa-wordwide .alfa-world-grid__item ul {
+      padding: 0;
+      margin-bottom: -2rem;
+      position: relative;
+      top: -2.5rem; }
+      .alfa-wordwide .alfa-world-grid__item ul li {
+        text-align: center; }
+        .alfa-wordwide .alfa-world-grid__item ul li:not(:last-child) {
+          margin-bottom: 5px; }
+
+.mission-imapct li {
+  background: #004500;
+  color: #ffffff;
+  padding: 2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 1.2;
+  border-radius: 4px; }
+
+.mission-imapct ul.outer {
+  display: flex;
+  column-gap: 1rem;
+  padding-bottom: 4rem; }
+  .mission-imapct ul.outer > li {
+    width: calc(100% / 2);
+    text-align: center; }
+    .mission-imapct ul.outer > li:last-child {
+      position: relative; }
+      .mission-imapct ul.outer > li:last-child::before {
+        content: "";
+        background: #004500;
+        height: 2.5rem;
+        width: 4px;
+        position: absolute;
+        bottom: -2.5rem;
+        left: 50%;
+        transform: translateX(-50%); }
+
+.mission-imapct ul.inner {
+  display: flex;
+  column-gap: 1rem; }
+  .mission-imapct ul.inner > li {
+    width: calc(100% / 3);
+    text-align: center;
+    position: relative;
+    align-content: center; }
+    .mission-imapct ul.inner > li::before {
+      content: "";
+      background: #004500;
+      height: 2.5rem;
+      width: 4px;
+      position: absolute;
+      top: -2.5rem;
+      left: 50%;
+      transform: translateX(-50%); }
+    .mission-imapct ul.inner > li:not(:last-child)::after {
+      content: "";
+      background: #004500;
+      height: 4px;
+      width: 103%;
+      position: absolute;
+      top: -2.5rem;
+      left: 100%;
+      transform: translateX(-48%); }
+
+.international-projects {
+  background: #004500; }
+  @media only screen and (min-width: 992.1px) {
+    .international-projects .heading-tertiary {
+      text-align: left; } }
+  .international-projects .video-wraaper {
+    background: #ffffff;
+    padding: 2rem;
+    height: 100%; }
+  @media only screen and (min-width: 992.1px) {
+    .international-projects .video-modal-area {
+      display: flex; } }
+  .international-projects .video-modal-area button,
+  .international-projects .video-modal-area .alfa-img-wrapper {
+    border: none;
+    background: transparent; }
+    @media only screen and (min-width: 992.1px) {
+      .international-projects .video-modal-area button,
+      .international-projects .video-modal-area .alfa-img-wrapper {
+        flex: 0 0 50%; } }
+    .international-projects .video-modal-area button > img,
+    .international-projects .video-modal-area .alfa-img-wrapper > img {
+      height: 25rem;
+      object-fit: cover;
+      width: 100%; }
+    .international-projects .video-modal-area button .overlay,
+    .international-projects .video-modal-area .alfa-img-wrapper .overlay {
+      margin-top: 2rem;
+      text-align: center; }
+      @media only screen and (max-width: 992px) {
+        .international-projects .video-modal-area button .overlay,
+        .international-projects .video-modal-area .alfa-img-wrapper .overlay {
+          margin-bottom: 1.5rem;
+          margin-top: 1.5rem; } }
+      .international-projects .video-modal-area button .overlay a,
+      .international-projects .video-modal-area .alfa-img-wrapper .overlay a {
+        margin-left: auto;
+        margin-right: auto; }
+      .international-projects .video-modal-area button .overlay img,
+      .international-projects .video-modal-area .alfa-img-wrapper .overlay img {
+        width: 6rem;
+        height: auto; }
+  @media only screen and (min-width: 992.1px) {
+    .international-projects .video-modal-area .video-modael-content {
+      flex: 0 0 50%;
+      padding-left: 3rem; } }
+
+.uttar-pradesh {
+  background: #004500; }
+  .uttar-pradesh .up-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2rem; }
+    @media only screen and (max-width: 992px) {
+      .uttar-pradesh .up-grid {
+        grid-template-columns: repeat(1, 1fr); } }
+    @media only screen and (min-width: 1200.1px) {
+      .uttar-pradesh .up-grid p.text-white {
+        padding-left: 10rem; } }
+    @media screen and (min-width: 992px) and (max-width: 1200px) {
+      .uttar-pradesh .up-grid .img-wrapper {
+        margin-top: 8rem; } }
+    @media only screen and (min-width: 992.1px) {
+      .uttar-pradesh .up-grid__item:nth-child(1) {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-end: 4;
+        grid-row-start: 1; }
+      .uttar-pradesh .up-grid__item:nth-child(2) {
+        grid-column-start: 2;
+        grid-column-end: 7;
+        grid-row-end: 2;
+        grid-row-start: 1; }
+      .uttar-pradesh .up-grid__item:nth-child(3) {
+        grid-column-start: 3;
+        grid-column-end: 7;
+        grid-row-end: 3;
+        grid-row-start: 2; }
+      .uttar-pradesh .up-grid__item:nth-child(4) {
+        grid-column-start: 5;
+        grid-column-end: 7;
+        grid-row-end: 4;
+        grid-row-start: 3; }
+      .uttar-pradesh .up-grid__item:nth-child(5) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-end: 5;
+        grid-row-start: 4; }
+      .uttar-pradesh .up-grid__item:nth-child(6) {
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-end: 5;
+        grid-row-start: 4; }
+      .uttar-pradesh .up-grid__item:nth-child(7) {
+        grid-column-start: 5;
+        grid-column-end: 7;
+        grid-row-end: 5;
+        grid-row-start: 4; } }
+  .uttar-pradesh .card {
+    padding: 25px;
+    height: 100%; }
+    .uttar-pradesh .card .city {
+      font-weight: 700; }
+      .uttar-pradesh .card .city span {
+        display: inline-block;
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-right: 5px;
+        background: var(--city-clr); }
+    .uttar-pradesh .card .school {
+      color: #ec268f;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin: 2px 0 0 0; }
+    .uttar-pradesh .card .student {
+      font-weight: 700; }
+    .uttar-pradesh .card p {
+      text-align: left;
+      color: #110B11; }
+  @media only screen and (min-width: 992.1px) {
+    .uttar-pradesh h2 {
+      text-align: right; }
+    .uttar-pradesh p {
+      text-align: right;
+      color: #ffffff; } }
 
 .our-team .content-wrapper {
   background: #f1f1f2;
@@ -1260,6 +1628,43 @@ li {
       @media only screen and (max-width: 768px) {
         .past-events-section .past-content .eevents-grid {
           flex-direction: column; } }
+
+@media only screen and (min-width: 1200.1px) {
+  .stories-of-transformation .aspiring-leaders .row {
+    padding: 0 5rem; } }
+
+.stories-of-transformation .aspiring-leaders .row em {
+  display: block;
+  font-weight: 700;
+  margin-top: 1rem; }
+
+@media only screen and (min-width: 768.1px) {
+  .stories-of-transformation .aspiring-leaders .row:nth-child(even) .content-wrapper {
+    padding-left: 2rem; } }
+
+.stories-of-transformation .aspiring-leaders .row:nth-child(odd) {
+  margin: 7rem 0; }
+  @media only screen and (max-width: 992px) {
+    .stories-of-transformation .aspiring-leaders .row:nth-child(odd) {
+      margin: 5rem 0; } }
+  @media only screen and (max-width: 768px) {
+    .stories-of-transformation .aspiring-leaders .row:nth-child(odd) {
+      margin: 3rem 0; } }
+  @media only screen and (min-width: 768.1px) {
+    .stories-of-transformation .aspiring-leaders .row:nth-child(odd) {
+      flex-direction: row-reverse; } }
+
+@media only screen and (min-width: 768.1px) {
+  .stories-of-transformation .aspiring-leaders .row:nth-child(3) img {
+    object-position: 100% 70% !important; } }
+
+.stories-of-transformation .aspiring-leaders .row img {
+  height: 37rem;
+  overflow: hidden;
+  width: 100%;
+  object-fit: cover;
+  object-position: 100% 38%;
+  box-shadow: 6px 6px 0 #f1f1f2; }
 
 .stories-of-transformation .our-volunteers .item {
   background: #f1f1f2;

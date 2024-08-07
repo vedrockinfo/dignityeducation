@@ -1,4 +1,52 @@
+
 .stories-of-transformation{
+    .aspiring-leaders{
+        .row{
+            @include respond (minWidth1200){
+                padding: 0 5rem;
+            }
+            em {
+                display: block;
+                font-weight: 700;
+                margin-top: 1rem;
+            }
+            &:nth-child(even){
+                .content-wrapper{
+                    @include respond (minWidth768){
+                        padding-left: 2rem;
+                    }
+                }
+            }
+            &:nth-child(odd){
+                margin: 7rem 0;
+                @include respond(maxWidth992) {
+                    margin: 5rem 0;
+                  }
+                
+                  @include respond(maxWidth768) {
+                    margin: 3rem 0;
+                  }
+                @include respond (minWidth768){
+                    flex-direction: row-reverse;
+                }
+            }
+            &:nth-child(3){
+                @include respond (minWidth768){
+                    img{
+                        object-position: 100% 70%!important;
+                    }
+                }
+            }
+            img{
+                height: 37rem;
+                overflow: hidden;
+                width: 100%;
+                object-fit: cover;
+                object-position: 100% 38%;
+                box-shadow: 6px 6px 0 $colorGrey;
+            }
+        }
+    }
     .our-volunteers {
         .item{
             background: $colorGrey;

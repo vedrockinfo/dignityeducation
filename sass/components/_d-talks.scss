@@ -6,35 +6,46 @@
     }
 }
 .dtalks-speak{
-    ul{
-        list-style: none;
-        padding: 0;
-        margin: 2rem 0 0 0;
-        li{
-            @include respond (minWidth992){
-                &:nth-child(1){
-                height: 112px;
+    .heading-secondary {
+        color: $colorWhite;
+        background: $colorPrimary;
+        display: inline-block;
+        padding: 6px 50px 6px 0px;
+        margin-bottom: 3rem;
+        position: relative;
+        text-transform: uppercase;
+        &::before{
+            content: "";
+            background: $colorPrimary;
+            position: absolute;
+            left: -99%;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            @media screen and (min-width:1600px) {
+                left: -248%;
+                transform: scaleX(4);
             }
-            &:nth-child(2){
-                height: 84px;
-            }
-            &:nth-child(3){
-                height: 84px;
-            }
-            }
-            &:not(:last-child){
-                margin-bottom: 2rem;
+        }
+    }
+    @include respond (minWidth575){
+        .content-wrapper {
+            display: grid;
+            grid-template-columns: 42% 58%;
+            align-items: baseline;
+            .heading-four{
+                font-weight: 600;
             }
         }
     }
 }
 .d-talks-cta{
     p{
-        font-size: 2.4rem!important;
+        font-size: 2rem!important;
         font-weight: 300;
         font-style: oblique;
         @include respond (minWidth768){
-            padding-right: 3rem;
+            padding-right: 20rem;
         }
     }
     .btn.btn-four{
@@ -65,8 +76,9 @@
     .link-one {
         text-align: center;
         a{
-        width: auto;
-        display: inline-block;
+            max-width: none !important;
+            display: inline-block;
+            padding: 0 30px;
     }
     }
     .tab-area{

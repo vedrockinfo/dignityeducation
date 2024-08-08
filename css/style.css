@@ -516,6 +516,9 @@ li {
   display: grid;
   place-content: center;
   font-weight: 600; }
+  .global-btn-dark.d-inline-block {
+    max-width: none;
+    padding: 0 3rem; }
   .global-btn-dark:hover {
     background: transparent;
     border: 1px solid #004500;
@@ -534,6 +537,9 @@ li {
   place-content: center;
   font-weight: 600;
   box-shadow: 3px 3px 0 #696969; }
+  .global-btn-light.d-inline-block {
+    max-width: none;
+    padding: 0 3rem; }
   .global-btn-light:hover {
     background: transparent;
     border: 1px solid #ffffff;
@@ -796,27 +802,42 @@ li {
   .d-talks-cta p {
     color: #ffffff; }
 
-.dtalks-speak ul {
-  list-style: none;
-  padding: 0;
-  margin: 2rem 0 0 0; }
-  @media only screen and (min-width: 992.1px) {
-    .dtalks-speak ul li:nth-child(1) {
-      height: 112px; }
-    .dtalks-speak ul li:nth-child(2) {
-      height: 84px; }
-    .dtalks-speak ul li:nth-child(3) {
-      height: 84px; } }
-  .dtalks-speak ul li:not(:last-child) {
-    margin-bottom: 2rem; }
+.dtalks-speak .heading-secondary {
+  color: #ffffff;
+  background: #004500;
+  display: inline-block;
+  padding: 6px 50px 6px 0px;
+  margin-bottom: 3rem;
+  position: relative;
+  text-transform: uppercase; }
+  .dtalks-speak .heading-secondary::before {
+    content: "";
+    background: #004500;
+    position: absolute;
+    left: -99%;
+    top: 0;
+    height: 100%;
+    width: 100%; }
+    @media screen and (min-width: 1600px) {
+      .dtalks-speak .heading-secondary::before {
+        left: -248%;
+        transform: scaleX(4); } }
+
+@media only screen and (min-width: 575.1px) {
+  .dtalks-speak .content-wrapper {
+    display: grid;
+    grid-template-columns: 42% 58%;
+    align-items: baseline; }
+    .dtalks-speak .content-wrapper .heading-four {
+      font-weight: 600; } }
 
 .d-talks-cta p {
-  font-size: 2.4rem !important;
+  font-size: 2rem !important;
   font-weight: 300;
   font-style: oblique; }
   @media only screen and (min-width: 768.1px) {
     .d-talks-cta p {
-      padding-right: 3rem; } }
+      padding-right: 20rem; } }
 
 .d-talks-cta .btn.btn-four {
   background: #ffffff;
@@ -843,8 +864,9 @@ li {
 .top-dtalks .link-one {
   text-align: center; }
   .top-dtalks .link-one a {
-    width: auto;
-    display: inline-block; }
+    max-width: none !important;
+    display: inline-block;
+    padding: 0 30px; }
 
 .top-dtalks .tab-area .list-group .list-group-item {
   background: #004500;
@@ -1468,9 +1490,13 @@ li {
     background: white;
     height: 100%;
     position: relative; }
+    .globaladvisory-committee .globaladvisory-person:hover i.fa {
+      opacity: 1;
+      visibility: visible; }
     .globaladvisory-committee .globaladvisory-person .globaladvisory-image {
       text-align: center;
-      margin-bottom: 2rem; }
+      margin-bottom: 2rem;
+      position: relative; }
       .globaladvisory-committee .globaladvisory-person .globaladvisory-image img {
         width: 100%;
         height: 20rem;
@@ -1483,8 +1509,30 @@ li {
         margin-bottom: 1.5rem; }
     .globaladvisory-committee .globaladvisory-person .globaladvisory-social {
       position: absolute;
-      top: 2rem;
-      left: 2rem; }
+      top: 0;
+      left: 0;
+      display: grid;
+      place-content: center;
+      width: 100%;
+      height: 100%; }
+      .globaladvisory-committee .globaladvisory-person .globaladvisory-social * {
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0; }
+      .globaladvisory-committee .globaladvisory-person .globaladvisory-social i {
+        opacity: 0;
+        visibility: hidden;
+        color: #004500;
+        border: 2px solid #004500;
+        background: rgba(255, 255, 255, 0);
+        width: 3rem;
+        height: 3rem;
+        display: grid;
+        place-content: center;
+        border-radius: 50%;
+        transition: 0.4s ease; }
 
 .annual-reports {
   background: #004500; }
@@ -1593,6 +1641,9 @@ li {
   background: #004500; }
   .past-events-section .row {
     row-gap: 3rem; }
+    @media only screen and (min-width: 768.1px) {
+      .past-events-section .row:first-child {
+        margin-bottom: 4rem; } }
   .past-events-section .past-content {
     background: #ffffff;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
@@ -1628,6 +1679,236 @@ li {
       @media only screen and (max-width: 768px) {
         .past-events-section .past-content .eevents-grid {
           flex-direction: column; } }
+
+.publications {
+  background: #004500; }
+  @media only screen and (max-width: 768px) {
+    .publications .row:first-child {
+      margin-bottom: 3rem; } }
+  @media only screen and (min-width: 768.1px) {
+    .publications .row:first-child {
+      flex-direction: row-reverse; } }
+  @media only screen and (min-width: 575.1px) {
+    .publications img {
+      width: calc(100% - 4rem);
+      margin: auto; } }
+
+.rajnath-section .heading-primary {
+  text-transform: none; }
+
+.rajnath-section .modal-content {
+  height: 100%; }
+
+.rajnath-section .modal-content button.btn-close {
+  position: absolute;
+  right: -30px;
+  top: -15px;
+  z-index: 1;
+  filter: invert(1);
+  font-size: 20px; }
+
+.rajnath-section .modal-content .modal-body {
+  padding: 0; }
+
+.rajnath-section .modal-dialog.modal-dialog-centered {
+  height: calc(100vh - 100px);
+  max-width: calc(100vw - 200px); }
+
+.rajnath-section .r-video {
+  position: relative;
+  background: transparent;
+  width: 100%;
+  margin: 38px auto; }
+  .rajnath-section .r-video::before {
+    content: "";
+    background-image: url(../images/icons/shape-01.png);
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    bottom: -48px;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    z-index: -1;
+    transform: scale(-1);
+    mix-blend-mode: multiply; }
+  .rajnath-section .r-video::after {
+    content: "";
+    background-image: url(../images/icons/shape-01.png);
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: -48px;
+    right: 0;
+    width: 200px;
+    height: 200px;
+    z-index: -1;
+    transform: scale(1);
+    mix-blend-mode: multiply; }
+  .rajnath-section .r-video img {
+    width: calc(100% - 100px);
+    margin: auto;
+    display: block;
+    z-index: 1; }
+
+.rajnath-section .overlayIcon {
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  left: 0;
+  right: 0;
+  place-content: center;
+  display: grid;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 40px;
+  background-color: #ff0000;
+  border-radius: 1rem;
+  color: #fff;
+  font-size: 40px;
+  z-index: 1;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer; }
+  .rajnath-section .overlayIcon i {
+    font-size: 16px; }
+  .rajnath-section .overlayIcon::before, .rajnath-section .overlayIcon::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+    border-radius: 50%;
+    border: 1px solid #f9004d;
+    transition: .5s; }
+  .rajnath-section .overlayIcon::before {
+    animation: ripple 2s linear infinite; }
+  .rajnath-section .overlayIcon::after {
+    animation: ripple 2s linear 1s infinite; }
+
+.magazine-10x-section .latest-magazine-cover {
+  position: relative; }
+  .magazine-10x-section .latest-magazine-cover span {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    text-transform: uppercase;
+    color: #ffffff;
+    background: linear-gradient(300deg, #f1271f, #9a1f2a, #f1271f);
+    font-size: 14px;
+    padding: 4px 15px; }
+
+.article-section {
+  background: #004500;
+  position: relative; }
+  .article-section::before {
+    content: "";
+    background-image: url(../images/article-bg-01.jpg);
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    mix-blend-mode: color-burn; }
+  .article-section .container {
+    position: relative; }
+    .article-section .container img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: top; }
+    .article-section .container span.sub-heading {
+      background: #fff;
+      letter-spacing: 0;
+      padding: 3px 30px;
+      border-radius: 0.4rem;
+      display: inline-block;
+      text-transform: uppercase; }
+    .article-section .container .heading-tertiary {
+      line-height: normal;
+      margin-bottom: 2rem; }
+      @media only screen and (min-width: 768.1px) {
+        .article-section .container .heading-tertiary {
+          text-align: left; } }
+    .article-section .container .date {
+      color: #ffffff;
+      border: 2px solid #ffffff;
+      padding: 5px 3rem;
+      border-radius: 5rem;
+      width: max-content; }
+      .article-section .container .date.d-block {
+        margin-left: auto; }
+
+.my-reports .publications-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 15px;
+  border: 1px solid #ccc; }
+  .my-reports .publications-grid__items .heading-tertiary {
+    text-align: left; }
+  .my-reports .publications-grid__items a {
+    width: fit-content;
+    padding-left: 20px;
+    padding-right: 20px; }
+  .my-reports .publications-grid__items img {
+    height: 166px;
+    object-fit: cover;
+    object-position: top; }
+
+.my-reports .link-one {
+  margin-top: 3rem; }
+  .my-reports .link-one.text-center a {
+    max-width: none;
+    display: inline-block;
+    padding: 0 40px; }
+
+.news-paper {
+  background: #004500;
+  position: relative; }
+  .news-paper::before {
+    content: "";
+    background-image: url(../images/article-bg-01.jpg);
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    mix-blend-mode: color-burn; }
+  .news-paper .container {
+    position: relative; }
+  .news-paper .newspaper .item img {
+    height: 166px;
+    width: 100%;
+    object-fit: cover;
+    object-position: top; }
+
+.videos-area {
+  background: #004500;
+  position: relative; }
+  .videos-area::before {
+    content: "";
+    background-image: url(../images/video-bg.png);
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    mix-blend-mode: color-burn; }
+  .videos-area .container {
+    position: relative; }
 
 @media only screen and (min-width: 1200.1px) {
   .stories-of-transformation .aspiring-leaders .row {

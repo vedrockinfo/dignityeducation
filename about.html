@@ -12,7 +12,7 @@
             display: block;
         }
         .tab-link.active {
-            font-weight: bold; /* Example styling for active tab */
+            font-weight: bold;
         }
     </style>
 </head>
@@ -23,13 +23,15 @@
     <a href="index.html?tab=tab3">Go to Tab 3</a>
     <a href="index.html?tab=tab4">Go to Tab 4</a>
     <a href="index.html?tab=tab5">Go to Tab 5</a>
-    
 
-    
+    <section data-image="images/banner/about-bg.jpg" class="existing-class"></section>
+<section id="target-section"></section>
 
-   
-    
-    
-   
+<script>
+    document.querySelectorAll('[data-image="images/banner/about-bg.jpg"]').forEach(function(element) {
+        // Target another section using its ID
+        document.getElementById('target-section').classList.add('new-bootstrap-class');
+    });
+</script>   
 </body>
 </html>

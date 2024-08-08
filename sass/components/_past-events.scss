@@ -2,6 +2,11 @@
     background: $colorPrimary;
     .row{
         row-gap:3rem;
+        &:first-child{
+            @include respond (minWidth768){
+                margin-bottom: 4rem;
+            }
+        }
     }
     .past-content{
         background: $colorWhite;

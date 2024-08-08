@@ -43,18 +43,23 @@ function showTabFromHash() {
   if (hash) {
     const activeTab = document.querySelector(hash);
     const activeLink = document.querySelector(`#link-${hash.substring(1)}`);
-    if (activeTab) {
+    if (activeTab && activeLink) {
       activeTab.classList.add('active');
       activeLink.classList.add('active');
     }
   } else {
-    tabContents[0].classList.add('active');
-    tabLinks[0].classList.add('active');
+    if (tabContents.length > 0) {
+      tabContents[0].classList.add('active');
+    }
+    if (tabLinks.length > 0) {
+      tabLinks[0].classList.add('active');
+    }
   }
 }
 
 window.addEventListener('hashchange', showTabFromHash);
-showTabFromHash();
+document.addEventListener('DOMContentLoaded', showTabFromHash);
+
 
 
 
@@ -105,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
 const video = document.getElementById('myVideo');
     const volumeButton = document.getElementById('volumeButton');
 
-    volumeButton.addEventListener('click', () => {
+    document.addEventListener('click', (event) => {
       if (video.muted) {
         video.muted = false;
         volumeButton.textContent = '🔇';
@@ -247,4 +252,77 @@ const video = document.getElementById('myVideo');
     }
   })
 
- 
+  $('.my-reports').owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: true,
+    dots: false,
+    navText: ['<i class="fa-solid fa-angle-left"></i>', '<i class="fa-solid fa-angle-right"></i>'],
+    autoplay: false,
+    autoplayTimeout: 7000,
+    smartSpeed: 800,
+    responsive: {
+      0: {
+        items: 1
+      },
+      600: {
+        items: 1
+      },
+      1000: {
+        items: 2
+      }
+    }
+  })
+
+  $('.newspaper').owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: false,
+    dots: true,
+    navText: ['<i class="fa-solid fa-angle-left"></i>', '<i class="fa-solid fa-angle-right"></i>'],
+    autoplay: false,
+    autoplayTimeout: 7000,
+    smartSpeed: 800,
+    responsive: {
+      0: {
+        items: 1
+      },
+      768: {
+        items: 2
+      },
+      992: {
+        items: 3
+      }
+    }
+  })
+  
+  $('.videos').owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: false,
+    dots: true,
+    navText: ['<i class="fa-solid fa-angle-left"></i>', '<i class="fa-solid fa-angle-right"></i>'],
+    autoplay: false,
+    autoplayTimeout: 7000,
+    smartSpeed: 800,
+    responsive: {
+      0: {
+        items: 1
+      },
+      768: {
+        items: 2
+      },
+      992: {
+        items: 2
+      }
+    }
+  })
+
+  
+
+  $('.hjhu').each(function() {
+    var dataImage = $(this).attr('data-image');
+    if (dataImage) {
+        $(this).attr('src', dataImage);
+    }
+});

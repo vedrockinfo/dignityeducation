@@ -372,3 +372,9 @@ jQuery(document).ready(function () {
     }
   });
 });
+
+
+
+jQuery(document).ready(function() {
+  jQuery('.inner-section').appendTo('.hero-section .bg-video');
+});

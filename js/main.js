@@ -22,7 +22,7 @@ jQuery(document).ready(function () {
 });
 
 jQuery(document).ready(function () {
-  jQuery('.contact .form-control').on('focus', function () {
+  jQuery('.form-control').on('focus', function () {
     jQuery(this).parent().addClass('focused');
   }).on('blur', function () {
     jQuery(this).parent().removeClass('focused');
@@ -310,10 +310,10 @@ const video = document.getElementById('myVideo');
         items: 1
       },
       768: {
-        items: 2
+        items: 1
       },
       992: {
-        items: 2
+        items: 1
       }
     }
   })
@@ -325,4 +325,50 @@ const video = document.getElementById('myVideo');
     if (dataImage) {
         $(this).attr('src', dataImage);
     }
+});
+
+
+function handleRadioSelection(radio) {
+  var parentElement = document.getElementById('partnerwithus');
+
+  if (radio.value === 'no') {
+    // Add the 'highlight' class to the parent element when 'No' is selected
+    parentElement.classList.add('highlight');
+  } else {
+    // Remove the 'highlight' class when 'Yes' is selected
+    parentElement.classList.remove('highlight');
+  }
+}
+
+jQuery(document).ready(function () {
+  jQuery(".dropdown-toggle").click(function () {
+    jQuery(".dropdown-toggle + ul.dropdown-menu").slideToggle();
+  })
+})
+
+jQuery(".w-org input#no").click(function () {
+  jQuery(".oth-int").hide();
+});
+
+jQuery(".w-org input#yes").click(function () {
+  jQuery(".oth-int").show();
+});
+
+jQuery(document).ready(function () {
+  jQuery('input[value="Other"]').change(function () {
+    if (jQuery(this).is(":checked")) {
+      jQuery(this).closest(".intersted-grid").addClass('other-checked');
+    } else {
+      jQuery(this).closest(".intersted-grid").removeClass('other-checked');
+    }
+  });
+});
+jQuery(document).ready(function () {
+  jQuery('input[value="Other"]').change(function () {
+    if (jQuery(this).is(":checked")) {
+      jQuery(this).closest(".expertise-grid").addClass('other-checked');
+    } else {
+      jQuery(this).closest(".expertise-grid").removeClass('other-checked');
+    }
+  });
 });

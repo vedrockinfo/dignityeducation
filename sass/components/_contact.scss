@@ -3,68 +3,7 @@
         background: $colorGrey;
         padding: 2rem;
     }
-    .form-group {
-        margin-bottom: 15px;
-        display: block;
-        position: relative;
-
-        &.focused {
-            label {
-                position: absolute;
-                top: -8px;
-                font-size: 10px;
-                background-color: rgba($colorGrey, $alpha: 1);
-                padding: 0.5px 5px;
-            }
-        }
-
-        &.inputted {
-            label {
-                position: absolute;
-                top: -8px;
-                font-size: 10px;
-                background-color: rgba($colorGrey, $alpha: 1);
-                padding: 0.5px 5px;
-            }
-        }
-
-        label {
-            font-size: 14px;
-            font-weight: 400;
-            color: $colorBlack;
-            position: absolute;
-            top: 10px;
-            left: 15px;
-            transition: all 0.5s;
-        }
-
-        input {
-            border-width: 0 0 1px 0;
-            background-color: rgba($colorWhite, $alpha: 1);
-            padding: 10px;
-            width: 100%;
-            border-color: #e1e6eb;
-            box-shadow: none;
-            height: 40px;
-            font-size: 13px;
-            line-height: 20px;
-            transition: all 0.2s linear;
-        }
-
-        textarea {
-            height: 120px;
-            border-width: 0 0 1px 0;
-            background-color: rgba($colorWhite, $alpha: 1);
-            padding: 10px 0;
-            width: 100%;
-            border-color: #e1e6eb;
-            box-shadow: none;
-            font-size: 13px;
-            resize: none;
-            line-height: 20px;
-            transition: all 0.2s linear;
-        }
-    }
+    
     .get-in-touch{
         display: flex;
         flex-wrap: wrap;

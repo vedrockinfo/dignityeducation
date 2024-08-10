@@ -64,48 +64,50 @@ document.addEventListener('DOMContentLoaded', showTabFromHash);
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    const map = document.getElementById('chronological-graph');
-    const popups = {
-        'growth': document.getElementById('growth-popup'),
-        'crisis': document.getElementById('crisis-popup'),
-        'expansion': document.getElementById('expansion-popup'),
-    };
+  const map = document.getElementById('chronological-graph');
+  const popups = {
+      'growth': document.getElementById('growth-popup'),
+      'crisis': document.getElementById('crisis-popup'),
+      'expansion': document.getElementById('expansion-popup'),
+  };
 
-    // Display growth popup when the page loads and hide others
-    popups['growth'].style.display = 'block';
-    Object.keys(popups).forEach(key => {
-        if (key !== 'growth') {
-            popups[key].style.display = 'none';
-        }
-    });
+  // Display the growth popup when the page loads and hide others
+  popups['growth'].style.display = 'block';
+  Object.keys(popups).forEach(key => {
+      if (key !== 'growth') {
+          popups[key].style.display = 'none';
+      }
+  });
 
-    map.addEventListener('click', (event) => {
-        const stateId = event.target.id;
-        if (stateId === 'poineering') {
-            // Scroll to section with ID 'ministry'
-            const sectionMinistry = document.getElementById('ministry');
-            sectionMinistry.scrollIntoView({
-                behavior: 'smooth' // Optional: adds smooth scrolling effect
-            });
-        } else if (popups[stateId]) {
-            // Hide all popups
-            Object.values(popups).forEach(popup => popup.style.display = 'none');
+  map.addEventListener('click', (event) => {
+      const stateId = event.target.id;
 
-            // Show the clicked state's popup
-            const popup = popups[stateId];
-            popup.style.display = 'block';
-            popup.style.left = `${event.pageX}px`;
-            popup.style.top = `${event.pageY}px`;
-        }
-    });
+      if (stateId === 'poineering') {
+          // Scroll to the section with ID 'ministry'
+          const sectionMinistry = document.getElementById('ministry');
+          sectionMinistry.scrollIntoView({
+              behavior: 'smooth' // Optional: adds smooth scrolling effect
+          });
+      } else if (popups[stateId]) {
+          // Hide all popups
+          Object.values(popups).forEach(popup => popup.style.display = 'none');
 
-    // Optionally, add a click listener to the document to hide popups when clicking outside
-    document.addEventListener('click', (event) => {
-        if (!event.target.closest('polygon') && !event.target.closest('.popup')) {
-            Object.values(popups).for(popup => popup.style.display = 'block');
-        }
-    });
+          // Show the clicked state's popup
+          const popup = popups[stateId];
+          popup.style.display = 'block';
+          popup.style.left = `${event.pageX}px`;
+          popup.style.top = `${event.pageY}px`;
+      }
+  });
+
+  // Optionally, add a click listener to the document to hide popups when clicking outside
+  document.addEventListener('click', (event) => {
+      if (!event.target.closest('polygon') && !event.target.closest('.popup')) {
+          Object.values(popups).forEach(popup => popup.style.display = 'none');
+      }
+  });
 });
+
 
 const video = document.getElementById('myVideo');
     const volumeButton = document.getElementById('volumeButton');
@@ -375,6 +377,25 @@ jQuery(document).ready(function () {
 
 
 
-jQuery(document).ready(function() {
-  jQuery('.inner-section').appendTo('.hero-section .bg-video');
+document.addEventListener('DOMContentLoaded', function () {
+  function updateHeroContent(innerSectionId) {
+      const heroSection = document.querySelector('.hero-section .bg-video');
+      const newContent = document.querySelector(`#${innerSectionId}`).innerHTML;
+      heroSection.innerHTML = newContent;
+
+      // Save the current tab in localStorage
+      localStorage.setItem('activeTab', innerSectionId);
+  }
+
+  const abts = document.querySelectorAll('.abts .abt');
+  abts.forEach(abt => {
+      abt.addEventListener('click', function () {
+          const targetSectionId = this.getAttribute('data-tab');
+          updateHeroContent(targetSectionId);
+      });
+  });
+
+  // Load the last active tab from localStorage, or default to "story"
+  const savedTab = localStorage.getItem('activeTab') || 'story';
+  updateHeroContent(savedTab);
 });

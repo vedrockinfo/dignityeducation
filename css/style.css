@@ -512,6 +512,9 @@ li {
   height: calc(100vh - 100px);
   max-width: calc(100vw - 200px); }
 
+.tab-content-wrapper .inner-section {
+  display: none; }
+
 @media only screen and (min-width: 992.1px) {
   .alfa-section .sub-heading {
     text-align: left; } }
@@ -2893,8 +2896,8 @@ header {
       filter: sepia(2) brightness(2); }
 
 .donationone-form {
-  background: #f5f6f9;
-  margin-top: 7rem;
+  background: #f1f1f2;
+  margin-top: 4rem;
   padding: 7rem 0; }
   @media only screen and (max-width: 768px) {
     .donationone-form {
@@ -3390,6 +3393,12 @@ header {
   border: 1px solid #ccc;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   padding: 3rem 2rem; }
+  @media only screen and (min-width: 992.1px) {
+    .global-advisory-section .gac-card {
+      min-height: 51rem; } }
+  @media only screen and (min-width: 1200.1px) {
+    .global-advisory-section .gac-card {
+      min-height: 43.2rem; } }
   .global-advisory-section .gac-card .top-blank {
     position: absolute;
     top: 0;

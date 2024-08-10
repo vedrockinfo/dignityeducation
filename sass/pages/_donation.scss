@@ -644,8 +644,8 @@
     }
   }
   .donationone-form {
-    background: #f5f6f9;
-    margin-top: 7rem;
+    background: $colorGrey;
+    margin-top: 4rem;
     padding: 7rem 0;
   
     @include respond (maxWidth768) {

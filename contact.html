@@ -71,24 +71,24 @@
     <section class="inner-tabs-area m-top">
       <div class="container">
         <ul class="nav-area">
-          <li class="nav-item">
-            <a href="#partnerwithus" id="link-partnerwithus" class="tab-link">
+          <li class="nav-item abts">
+            <a href="#partnerwithus" id="link-partnerwithus" class="tab-link abt" data-tab="partnerwithusimg">
               <div class="global-tabs">
                 <h6>partner with us</h6>
                 <img src="images/icons/our-story.png" alt="" class="img-fluid">
               </div>
             </a>
           </li>
-          <li class="nav-item">
-            <a href="#workwithus" id="link-workwithus" class="tab-link">
+          <li class="nav-item abts">
+            <a href="#workwithus" id="link-workwithus" class="tab-link abt" data-tab="workeithusimg">
               <div class="global-tabs">
                 <h6>work with us</h6>
                 <img src="images/icons/our-team.png" alt="" class="img-fluid">
               </div>
             </a>
           </li>
-          <li class="nav-item">
-            <a href="#donate" id="link-donate" class="tab-link">
+          <li class="nav-item abts">
+            <a href="#donate" id="link-donate" class="tab-link abt" data-tab="donateimg">
               <div class="global-tabs">
                 <h6>donate</h6>
                 <img src="images/icons/global.png" alt="" class="img-fluid">
@@ -100,9 +100,9 @@
     </section>
     <section class="stories-of-transformation">
       <div id="partnerwithus" class="tab-content-wrapper">
-        <!-- <div class="bg-video">
+        <div class="inner-section" id="partnerwithusimg">
           <img src="images/banner/partners-bg.jpg" alt="" class="img-fluid">
-        </div> -->
+        </div>
         <section class="partner-with-us p-top p-bottom">
           <div class="container">
             <div class="involved-grid">
@@ -628,6 +628,9 @@
     </section>
     <section class="our-projects">
       <div id="workwithus" class="tab-content-wrapper">
+        <div class="inner-section" id="workeithusimg">
+          <img src="images/banner/Work-with-us.jpg" alt="" class="img-fluid">
+        </div>
         <section class="work-with-us p-top p-bottom">
           <div class="container">
             <div class="involved-grid">
@@ -1119,20 +1122,22 @@
     <section class="alfa-section m-bottom">
       <div id="donate" class="tab-content-wrapper">
         <section class="donating-page">
-          <section class="child-donation">
-            <div class="child-donation-grid">
-              <div class="child-donation-item">
-                <div class="dontaing-img">
-                  <img src="images/IMG_7935.jpg" alt="" class="img-fluid">
+          <div class="inner-section" id="donateimg">
+            <section class=" child-donation">
+              <div class="child-donation-grid">
+                <div class="child-donation-item">
+                  <div class="dontaing-img">
+                    <img src="images/IMG_7935.jpg" alt="" class="img-fluid">
+                  </div>
+                </div>
+                <div class="child-donation-item">
+                  <!-- <h1>GET IN TOUCH WITH US</h1> -->
+                  <h2>DONATE FOR CHILDREN'S EDUCATION</h2>
+                  <div class="link-one"><a href="#" class="global-btn-dark">Donate</a></div>
                 </div>
               </div>
-              <div class="child-donation-item">
-                <!-- <h1>GET IN TOUCH WITH US</h1> -->
-                <h2>DONATE FOR CHILDREN'S EDUCATION</h2>
-                <div class="link-one"><a href="#" class="global-btn-dark">Donate</a></div>
-              </div>
-            </div>
-          </section>
+            </section>
+          </div>
           <section class="donationone-form">
             <div class="container">
               <div class="row">
@@ -1592,6 +1597,7 @@
   </footer>
 
   <script src="vendor/js/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.1/mdb.min.js"></script>
   <script src="vendor/js/bootstrap.bundle.min.js"></script>
   <script src="vendor/js/owl.carousel.min.js"></script>
   <script src="vendor/js/jquery-ui.min.js"></script>

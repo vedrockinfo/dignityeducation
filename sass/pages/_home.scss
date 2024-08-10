@@ -433,6 +433,12 @@
         border: 1px solid #ccc;
         box-shadow: $boxShadow;
         padding: 3rem 2rem;
+        @include respond (minWidth992){
+            min-height: 51rem;
+        }
+        @include respond (minWidth1200){
+            min-height: 43.2rem;
+        }
         .top-blank{
             position: absolute;
             top: 0;

@@ -95,18 +95,31 @@ document.addEventListener('DOMContentLoaded', () => {
           // Show the clicked state's popup
           const popup = popups[stateId];
           popup.style.display = 'block';
-          popup.style.left = `${event.pageX}px`;
-          popup.style.top = `${event.pageY}px`;
+
+          // Calculate position
+          const rect = event.target.getBoundingClientRect();
+          const offsetX = 10; // Adjust if needed
+          const offsetY = 10; // Adjust if needed
+          popup.style.left = `${rect.left + window.scrollX + offsetX}px`;
+          popup.style.top = `${rect.top + window.scrollY + offsetY}px`;
       }
   });
 
   // Optionally, add a click listener to the document to hide popups when clicking outside
   document.addEventListener('click', (event) => {
-      if (!event.target.closest('polygon') && !event.target.closest('.popup')) {
+      if (!event.target.closest('#chronological-graph') && !event.target.closest('.popup')) {
           Object.values(popups).forEach(popup => popup.style.display = 'none');
       }
   });
+
+  // Prevent event propagation to document when clicking on a popup
+  Object.values(popups).forEach(popup => {
+      popup.addEventListener('click', (event) => {
+          event.stopPropagation();
+      });
+  });
 });
+
 
 
 const video = document.getElementById('myVideo');

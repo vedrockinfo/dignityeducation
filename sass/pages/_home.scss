@@ -108,7 +108,7 @@
     }
     .map-wrapper{
         padding: 2rem;
-        background: #e7e7e7;
+        background: #bfbfbf;
         height: 100%;
         .heading-tertiary{
             margin-bottom: 4rem;
@@ -156,6 +156,14 @@
         }
         &__img{
             padding: 2rem;
+            @include respond (minWidth768){
+                height: 28rem;
+            }
+            img{
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
         }
         &__content{
             padding: 2rem;
@@ -181,7 +189,7 @@
             box-shadow: 0 1rem 0 #ccc;
             margin-bottom: 4rem;
             img{
-                min-height: 44rem;
+                min-height: 47rem;
                 width: 100%;
                 object-fit: cover;
             }
@@ -332,6 +340,8 @@
             overflow: hidden;
             img{
                 transition: $transition;
+                height: 26rem;
+                object-fit: cover;
                 &:hover{
                     transform: scale(1.2);
                 }
@@ -484,3 +494,83 @@
         margin: auto;
     }
 }
+.flip-card{
+    background-color: transparent;
+    perspective: 1000px;
+    height: 100%;
+    width: 100%;
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 2s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+  }
+  &:focus, 
+  &:hover{
+    .flip-card-inner{
+        outline: 0;
+        transform: rotateY(180deg);
+    }
+  }
+  .flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  background: $colorWhite;
+  height: 100%;
+}
+.flip-card-front {
+    border: 1px solid #000;
+    padding: 2rem;
+    border-radius: 1rem;
+    color: black;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .flip-card-back {
+    border: 1px solid #000;
+    padding: 1rem;
+    border-radius: 1rem;
+    transform: rotateY(180deg);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p{
+        font-size: 16px;
+    }
+  }
+}
+
+.text-center {
+    text-align: center;
+  }
+  
+  .color-white {
+    color: #fff;
+  }
+  
+  .box-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 35px 15px;
+    width: 100%;
+  }
+  
+  @media screen and (min-width:1380px) {
+    .box-container {
+      flex-direction: row
+    }
+  }
+  
+  
+  

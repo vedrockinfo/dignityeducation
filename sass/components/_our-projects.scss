@@ -51,83 +51,23 @@
     }
 }
 
-.mission-imapct {
-    li {
-        background: $colorPrimary;
-        color: $colorWhite;
-        padding: 2rem;
-        text-transform: uppercase;
-        font-weight: 600;
-        font-size: 1.8rem;
-        line-height: 1.2;
-        border-radius: 4px;
-    }
-
-    ul.outer {
-        display: flex;
-        column-gap: 1rem;
-        padding-bottom: 4rem;
-
-        &>li {
-            width: calc(100% / 2);
-            text-align: center;
-
-            &:last-child {
-                position: relative;
-
-                &::before {
-                    content: "";
-                    background: $colorPrimary;
-                    height: 2.5rem;
-                    width: 4px;
-                    position: absolute;
-                    bottom: -2.5rem;
-                    left: 50%;
-                    transform: translateX(-50%);
-                }
-            }
-        }
-    }
-
-    ul.inner {
-        display: flex;
-        column-gap: 1rem;
-
-        &>li {
-            width: calc(100% / 3);
-            text-align: center;
-            position: relative;
-            align-content: center;
-
-            &::before {
-                content: "";
-                background: $colorPrimary;
-                height: 2.5rem;
-                width: 4px;
-                position: absolute;
-                top: -2.5rem;
-                left: 50%;
-                transform: translateX(-50%);
-            }
-
-            &:not(:last-child) {
-                &::after {
-                    content: "";
-                    background: $colorPrimary;
-                    height: 4px;
-                    width: 103%;
-                    position: absolute;
-                    top: -2.5rem;
-                    left: 100%;
-                    transform: translateX(-48%);
-                }
-            }
-        }
-    }
-}
-
 .international-projects {
     background: $colorPrimary;
+    position: relative;
+            &::before, &::after{
+                content: "";
+                background: $colorPrimary;
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                top: 0;
+            }
+            &::before{
+                left: -99.99%;
+            }
+            &::after{
+                right: -99.99%;
+            }
 
     .heading-tertiary {
         @include respond (minWidth992) {
@@ -311,4 +251,112 @@
             color: $colorWhite;
         }
     }
+}
+.mission-impact-tabs{
+    overflow: hidden;
+    .nav{
+        column-gap: 1rem;
+    }
+    .nav-item{
+        background: #004500;
+        width: calc(100% / 2 - 0.5rem);
+        border-radius: 0;
+        &:first-child{
+            .nav-link{
+                &.active{
+                    .verticle-line{
+                        &::before{
+                            content: "";
+                                    background: $colorPrimary;
+                                    height: 25rem;
+    width: 4px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+                        }
+                        &::after{
+                            content: "";
+                                    background: $colorPrimary;
+    height: 4px;
+    width: 5rem;
+    position: absolute;
+    bottom: 25rem;
+    left: 2.6rem;
+                        }
+                    }
+                }
+            }
+        }
+        .nav-link{
+            text-transform: uppercase;
+        font-weight: 600;
+        font-size: 1.8rem;
+        line-height: 1.2;
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        color: #ffffff;
+        &.active{
+            color: $colorWhite;
+            background: transparent;
+            position: relative;
+            .verticle-line {
+                height: 4px;
+    width: 3rem;
+    background: $colorPrimary;
+    pointer-events: none;
+    position: absolute;
+    bottom: -13px;
+    left: 50%;
+    transform: translateX(-50%) rotate(90deg);  
+            }
+        }
+        }
+    }
+    ul.inner {
+        display: flex;
+        column-gap: 1rem;
+        position: relative;
+    top: 40px;
+
+        &>li {
+            width: calc(100% / 3);
+            text-align: center;
+            position: relative;
+            align-content: center;
+            background: $colorPrimary;
+        color: $colorWhite;
+        padding: 2rem;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 1.8rem;
+        line-height: 1.2;
+        border-radius: 4px;
+
+            &::before {
+                content: "";
+                background: $colorPrimary;
+                height: 2.5rem;
+                width: 4px;
+                position: absolute;
+                top: -2.5rem;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            &:not(:last-child) {
+                &::after {
+                    content: "";
+                    background: $colorPrimary;
+                    height: 4px;
+                    width: 103%;
+                    position: absolute;
+                    top: -2.5rem;
+                    left: 100%;
+                    transform: translateX(-49%);
+                }
+            }
+        }
+    }
+   
 }

@@ -37,6 +37,9 @@
 .inner-tabs-area{
   z-index: 1;
   position: relative;
+  @include respond (minWidth768){
+    margin-top: -7rem;
+  }
   .container{
       @include respond (minWidth1200){
           max-width: 90rem;

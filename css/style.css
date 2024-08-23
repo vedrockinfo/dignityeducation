@@ -267,6 +267,9 @@ li {
 .inner-tabs-area {
   z-index: 1;
   position: relative; }
+  @media only screen and (min-width: 768.1px) {
+    .inner-tabs-area {
+      margin-top: -7rem; } }
   @media only screen and (min-width: 1200.1px) {
     .inner-tabs-area .container {
       max-width: 90rem; } }

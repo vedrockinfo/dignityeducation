@@ -172,7 +172,8 @@
                             font-weight: 500;
                             line-height: 16px;
                             text-align: center;
-                        }
+                            color: $colorBlack;
+                        }   
                     }
                 }
                 .modal-content{
@@ -187,6 +188,7 @@
                                 i{
                                     color: $colorWhite;
                                     font-size: 2rem;
+                                    display: none;
                                 }
                             }
                             .modal-body{

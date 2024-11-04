@@ -1,0 +1,250 @@
+.eyewiteness{
+    .electronic-video-one{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin-top: 5rem;
+        @include respond (maxWidth768){
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+    .electronic-video-two{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin-top: 20px;
+        @include respond (maxWidth768){
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}
+.audio-section{
+    background: $colorPrimary;
+    margin-top: 7rem;
+    position: relative;
+    @include respond (maxWidth768){
+        margin-top: 4rem;
+    }
+    &::before{
+        content: "";
+        background-image: url('../img/subscribe-bg.png');
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background-size: cover;
+        filter: brightness(10);
+        background-position: bottom;
+        width: 100%;
+        height: 100%;
+        mix-blend-mode: overlay;
+        opacity: 0.1;
+    }
+    .container{
+        position: relative;
+    }
+    .rolling-basis-one{
+        margin-bottom: 1.5rem;
+      color: $colorPrimary;
+      font-weight: 600;
+      position: relative;
+      z-index: 1;
+      padding: 8px 20px;
+      font-size: 14px;
+      text-transform: uppercase;
+      display: inline-block;
+      margin-bottom: 4rem;
+      &::before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: $colorWhite;
+        z-index: -1;
+        transform: skewX(25deg) rotate(-2deg);
+      }
+    }
+    .audio-card{
+        .aud-img{
+            margin-bottom: 20px;
+            img{
+                border-radius: 30px;
+                border: 4px solid $colorPrimary;
+                outline: 2px solid $colorWhite;
+            }
+        }
+    }
+    
+}
+.print-media{
+    .print-media-grid{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin-top: 5rem;
+        @include respond (maxWidth768){
+            grid-template-columns: repeat(1, 1fr);
+        }
+        &__item{
+            .news-paper{
+                background: transparent;
+                img{
+                    @include respond (minWidth768){
+                        max-height: 311.64px;
+                        width: 100%;
+                        object-fit: cover;
+                        object-position: top;
+                    }
+                }
+                h4{
+                    font-size: 16px;
+                    font-weight: 600;
+                    text-align: center;
+                    margin: 15px 0;
+                    color: $colorPrimary;
+                }
+            }
+        }
+    }
+}
+
+.in-press{
+    .in-press-grid{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        margin-top: 5rem;
+        @include respond (maxWidth575){
+            grid-template-columns: repeat(1, 1fr);
+        }
+        @include respond (maxWidth992){
+            grid-template-columns: repeat(2, 1fr);
+        }
+        &__item{
+            .news-paper{
+                height: 260.64px;
+                overflow: hidden;
+                a{
+                    display: block;
+                }
+                img{
+                    @include respond (minWidth768){
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                        object-position: top;
+                    }
+                }
+            }
+        }
+    }
+    .link-one{
+        margin-top: 5rem;
+    }
+}
+
+.press-news{
+    .press-news-grid{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        @include respond (maxWidth992){
+            grid-template-columns: repeat(3, 1fr)
+        }
+        @include respond (maxWidth768){
+            grid-template-columns: repeat(2, 1fr)
+        }
+        @include respond (maxWidth575){
+            grid-template-columns: repeat(1, 1fr)
+        }
+        gap: 2rem;
+        &__items{
+            a{
+                display: block;
+                height: 266px;
+                overflow: hidden;
+                position: relative;
+                &::before{
+                    content: "";
+                    background: rgba($colorBlack, $alpha: 0.3);
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: all 0.5s ease-in-out;
+                }
+                &:hover{
+                    &::before{
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                    img{
+                        object-position: bottom;
+                    }
+                }
+                img{
+                    object-fit: cover;
+                    object-position: top;
+                    height: 100%;
+                    width: 100%;
+                    transition: 1s ease-in-out;
+                }
+            }
+        }
+    }
+}
+.press-news{
+    .press-news-grid{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        @include respond (maxWidth992){
+            grid-template-columns: repeat(3, 1fr)
+        }
+        @include respond (maxWidth768){
+            grid-template-columns: repeat(2, 1fr)
+        }
+        @include respond (maxWidth575){
+            grid-template-columns: repeat(1, 1fr)
+        }
+        gap: 2rem;
+        &__items{
+            a{
+                display: block;
+                height: 266px;
+                overflow: hidden;
+                position: relative;
+                &::before{
+                    content: "";
+                    background: rgba($colorBlack, $alpha: 0.3);
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: all 0.5s ease-in-out;
+                }
+                &:hover{
+                    &::before{
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                    img{
+                        object-position: bottom;
+                    }
+                }
+                img{
+                    object-fit: cover;
+                    object-position: top;
+                    height: 100%;
+                    width: 100%;
+                    transition: 1s ease-in-out;
+                }
+            }
+        }
+    }
+}

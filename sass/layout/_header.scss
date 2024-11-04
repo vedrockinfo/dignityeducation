@@ -70,6 +70,8 @@ header {
           padding: 0px 20px !important;
             border-top: 4px solid rgba(#ccc, $alpha: 0.4);
             margin-right: 2px;
+            @include respond (maxWidth768){
+              padding: 10px 20px!important            }
           &:hover{
             color: $colorPrimary;
           }

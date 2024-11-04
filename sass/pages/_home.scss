@@ -144,10 +144,13 @@
             margin-right: 0;
         }
         @include respond (minWidth992){
-            height: 73rem;
+            height: 78rem;  
         }
         @include respond (minWidth1200){
             height: 71rem;
+        }
+        @media screen and (min-width:1400px) {
+            height: 65rem;
         }
         &:hover{
             box-shadow: 3px 3px 0 #c9c9c9;
@@ -162,7 +165,8 @@
             img{
                 height: 100%;
                 object-fit: cover;
-                object-position: center;
+                object-position: top;
+    width: 100%;
             }
         }
         &__content{
@@ -185,6 +189,7 @@
 .call-to-action{
     .call-to-action-card{
         box-shadow: $boxShadow;
+        height: 100%;
         &__img{
             box-shadow: 0 1rem 0 #ccc;
             margin-bottom: 4rem;
@@ -199,7 +204,7 @@
                 text-transform: uppercase;
             }
             p{
-                padding: 1rem 1rem 0;
+                padding: 1rem 2rem 0;
             }
         }
         &__link{
@@ -342,6 +347,7 @@
                 transition: $transition;
                 height: 26rem;
                 object-fit: cover;
+                width: 100%;
                 &:hover{
                     transform: scale(1.2);
                 }

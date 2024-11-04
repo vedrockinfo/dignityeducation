@@ -126,7 +126,7 @@ const video = document.getElementById('myVideo');
     const volumeButton = document.getElementById('volumeButton');
 
     document.addEventListener('click', (event) => {
-      if (video.muted) {
+      if (video.muted) {  
         video.muted = false;
         volumeButton.textContent = '🔇';
       } else {
@@ -224,7 +224,7 @@ const video = document.getElementById('myVideo');
     }
   })
   $('.literacry-ss-grid').owlCarousel({
-    loop: true,
+    loop: true, 
     margin: 40,
     nav: true,
     dots: false,

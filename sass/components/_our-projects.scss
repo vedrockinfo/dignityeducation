@@ -318,6 +318,13 @@
         column-gap: 1rem;
         position: relative;
     top: 40px;
+    @include respond (maxWidth768){
+        flex-direction: column;
+    gap: 20px;
+    align-items: end;
+    top: 15px;
+    padding: 0 30px 0 0px;
+    }
 
         &>li {
             width: calc(100% / 3);
@@ -332,7 +339,18 @@
         font-size: 1.8rem;
         line-height: 1.2;
         border-radius: 4px;
-
+        @include respond (maxWidth768){
+            width: auto;
+            padding: 1rem;
+            font-size: 1.5rem;
+        }
+            &:first-child{
+                &::before{
+                    @include respond (maxWidth768){
+                        content: none;
+                    }
+                }
+            }
             &::before {
                 content: "";
                 background: $colorPrimary;
@@ -354,6 +372,9 @@
                     top: -2.5rem;
                     left: 100%;
                     transform: translateX(-49%);
+                    @include respond (maxWidth768){
+                        content: none;
+                    }
                 }
             }
         }

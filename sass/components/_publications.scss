@@ -213,7 +213,8 @@
   }
 
   .news-paper {
-    background: $colorPrimary;position: relative;
+    background: $colorPrimary;
+    position: relative;
     &::before{
         content: "";
         background-image: url(../images/article-bg-01.jpg);

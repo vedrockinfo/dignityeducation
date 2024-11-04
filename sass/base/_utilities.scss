@@ -62,11 +62,35 @@
   }
 }
 
+.m-bottom-2 {
+  margin-bottom: 4rem;
+
+  @include respond(maxWidth992) {
+    margin-bottom: 4rem;
+  }
+
+  @include respond(maxWidth768) {
+    margin-bottom: 3rem;
+  }
+}
+
 .m-top {
   margin-top: 7rem;
 
   @include respond(maxWidth992) {
     margin-top: 5rem;
+  }
+
+  @include respond(maxWidth768) {
+    margin-top: 3rem;
+  }
+}
+
+.m-top-2 {
+  margin-top: 4rem;
+
+  @include respond(maxWidth992) {
+    margin-top: 4rem;
   }
 
   @include respond(maxWidth768) {
